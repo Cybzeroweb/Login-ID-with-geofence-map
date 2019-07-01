@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Telematics</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="menu_item_settings">Settings&#8230;</string>
+    <string name="hint_search">Search or press on map to add marker</string>
+    <string name="search_button_text">Search</string>
+    <string name="menu_item_my_alarms">My Alarms</string>
+    <string name="hint_enter_name">Enter name</string>
+    <string name="menu_item_help">Help</string>
+    <string name="helpText">1. Set your destination by either searching for the address in the searchbar at the top of the screen or by long pressing on your desired location. \n\n2. The application is now tracking your progress towards the marker, and will issue an alarm once you have reached your destination.
+    \n\n3. You can save your alarm point and set starting time for it. Tap on the marker and after that press on information window \n\n4. You can set a time and put the program in the background mode, the application starts to track your location in selected time.
+     \n\n5. By long pressing alarm can be removed from the list \n\n6. Button Pause stops location tracking and switches application to energy saving mode. If you start moving again - you must switch GPS Alarm in active mode again - by pressing Start button.
+        \n -- Settings include:
+            \n - Custom alarm sound;
+            \n - Notification Radius (distance);
+            \n 500 metres by default
+\n - Selecting maximum speed
+       \n 100 km/h by default.
+    </string>
+    <string name="pause">Pause</string>
+    <string name="share_using">sharevia</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_having_account">Already Having an Account?</string>
+    <string name="log_in">Log In</string>
+    <string name="not_having_account">Not Having an Account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="logout">Logout</string>
+
+</resources>

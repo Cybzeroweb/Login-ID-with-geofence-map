@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RingtonePreference
+        android:title="Alarm Tone"
+        android:summary="Select a custom tone for the alarm \nor leave it to your phone's default alarm tone"
+        android:key="alarmRingtone"
+        android:ringtoneType="alarm|ringtone"
+        android:showSilent="false" />
+    <!-- android:defaultValue="Settings.System.DEFAULT_RINGTONE_URI" -->
+
+    <ListPreference
+        android:title="Alarm Radius"
+        android:summary="Choose the distance to destination \nat which alarms should be triggered"
+        android:key="alarmRadius"
+        android:defaultValue="500"
+        android:entries="@array/alarmRadiusMenuEntries"
+        android:entryValues="@array/alarmRadiusValues" />
+
+    <ListPreference
+        android:title="Map Type"
+        android:summary="Select from different types of Google Maps"
+        android:key="mapType"
+        android:defaultValue="2"
+        android:entries="@array/mapTypeMenuEntries"
+        android:entryValues="@array/mapTypeValues" />
+
+    <ListPreference
+        android:defaultValue="100"
+        android:entries="@array/maximumSpeedMenuEntries"
+        android:entryValues="@array/maximumSpeedValues"
+        android:key="maximumSpeed"
+        android:summary="Set the maximum speed of your movement.\nThis will be used to calculate location update interval far away from target."
+        android:title="Maximum speed (km/h)" />
+
+
+</PreferenceScreen>

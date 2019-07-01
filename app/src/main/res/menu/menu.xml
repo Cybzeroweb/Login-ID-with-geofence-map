@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="org.gpsalarm.MapActivity" >
+        <!-- <item
+             android:id="@+id/menuItemMyAlarms"
+             android:title="@string/menu_item_my_alarms" /> -->
+        <item
+            android:id="@+id/menuItemSettings"
+            android:title="@string/menu_item_settings" />
+
+        <item
+            android:id="@+id/menuItemHelp"
+            android:title="@string/menu_item_help" />
+
+        <item
+            android:id="@+id/sharemylocation"
+            android:title="Share My Location"/>
+
+        <item
+             android:id="@+id/routemap"
+            android:title="Route Map"
+            android:visible="false"/>
+
+
+
+
+</menu>

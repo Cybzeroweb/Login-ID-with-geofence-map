@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.geofence">
+
+    <!--
+      The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+      Google Maps Android API v2, but you must specify either coarse or fine
+      location permissions for the 'MyLocation' functionality.
+   -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.example.geofence.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="com.example.geofence.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permissions.READ_GSERVICES" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="Telematics"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+      <receiver android:name="com.example.geofence.AlarmReceiver" />
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+        <activity android:name=".DashboardActivity" ></activity>
+
+      <activity
+          android:name="com.example.geofence.StartActivity"
+          android:screenOrientation="portrait">
+
+      </activity>
+
+
+      <activity
+          android:name="com.example.geofence.MapsActivity"
+          android:parentActivityName="com.example.geofence.StartActivity" />
+
+      <activity
+          android:name="com.example.geofence.PreferencesActivity"
+          android:label="Settings"
+          android:parentActivityName="com.example.geofence.MapsActivity" />
+      <activity
+          android:name="com.example.geofence.HelpActivity"
+          android:label="Help"
+          android:parentActivityName="com.example.geofence.MapsActivity" />
+        <activity
+            android:name="com.example.geofence.RouteMap"
+            android:label="RouteMap"
+            android:parentActivityName="com.example.geofence.MapsActivity" />
+
+      <!-- TODO should use new key AIzaSyCbsL3lrU-8yCmTRTgvtl___WD5rkplkcM here -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDSmhPqzao0sYyo5eiBCTEf1YY3ML9NTmw" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+
+    </application>
+</manifest>
+
+
+
+
+
+
+

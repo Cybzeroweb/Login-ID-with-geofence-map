@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/map"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.geofence.MapsActivity">
+
+<fragment
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:name="com.google.android.gms.maps.MapFragment"
+android:id="@+id/fragment"
+tools:layout_editor_absoluteY="0dp"
+tools:layout_editor_absoluteX="0dp"
+android:layout_below="@+id/line"
+android:layout_alignParentRight="true"
+android:layout_alignParentEnd="true" />
+
+<fragment
+android:id="@+id/place_autocomplete_fragment"
+android:layout_width="match_parent"
+android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+android:layout_height="wrap_content"
+android:windowSoftInputMode="adjustPan"/>
+
+<LinearLayout
+android:id="@+id/line"
+android:layout_below="@+id/place_autocomplete_fragment"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+
+
+<Button
+    android:text="Search location"
+    android:id="@+id/button"
+    android:onClick="geoLocate"
+    android:background="@color/wallet_holo_blue_light"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</LinearLayout>
+
+
+<Button
+android:id="@+id/startpause"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_alignParentLeft="true"
+android:layout_alignParentStart="true"
+android:layout_below="@+id/line"
+android:background="@android:color/holo_red_light"
+android:onClick="startPauseTrack"
+android:state_pressed="true"
+android:text="Pause tracking" />
+
+
+
+
+
+</RelativeLayout>
